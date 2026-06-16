@@ -1,0 +1,21 @@
+public class BibliotecaController {
+
+    private Biblioteca biblioteca;
+
+    public BibliotecaController() {
+        biblioteca = new Biblioteca();
+    }
+
+    /*
+     * GRASP - Controller
+     * Esta classe recebe as solicitações do usuário e
+     * coordena as operações do sistema.
+     */
+    public void cadastrarLivro(String titulo, String autor) {
+        biblioteca.adicionarLivro(titulo, autor);
+    }
+
+    public void mostrarLivros() {
+        biblioteca.listarLivros();
+    }
+}
